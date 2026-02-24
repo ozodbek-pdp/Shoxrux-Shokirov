@@ -42,3 +42,82 @@ while (num3 > 0) {
 }
 
 console.log(largestDigit);
+
+// lesson 4 -1
+
+let a = 15;
+let b = 25;
+
+if (a > b) {
+    console.log(a);
+} else {
+    console.log(b);
+}
+
+//lesson 4 -2
+
+let num1 = 3;
+let num2 = -7;
+let num3 = 2;
+
+let product = num1 * num2 * num3;
+
+if (product < 0) {
+    alert("-");
+} else if (product > 0) {
+    alert("+");
+} else {
+    alert("0");
+}
+
+// lesson 4 -3 
+
+let x = 0;
+let y = -1;
+let z = 4;
+
+if (x >= y && x >= z) {
+    if (y >= z) {
+        alert(x + ", " + y + ", " + z);
+    } else {
+        alert(x + ", " + z + ", " + y);
+    }
+} else if (y >= x && y >= z) {
+    if (x >= z) {
+        alert(y + ", " + x + ", " + z);
+    } else {
+        alert(y + ", " + z + ", " + x);
+    }
+} else {
+    if (x >= y) {
+        alert(z + ", " + x + ", " + y);
+    } else {
+        alert(z + ", " + y + ", " + x);
+    }
+}
+
+//lesson 4 -4
+
+for (let i = 0; i <= 15; i++) {
+    if (i % 2 === 0) {
+        console.log(i + "even");
+    } else {
+        console.log(i + "odd");
+    }
+}
+
+//lesson 4 -5
+
+for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+}
+
+//lesson 4 -6
