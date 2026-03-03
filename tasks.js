@@ -121,3 +121,148 @@ for (let i = 1; i <= 100; i++) {
 }
 
 //lesson 4 -6
+
+
+
+
+let a = 15;
+let b = 25;
+
+if (a > b) {
+    console.log(a);
+} else {
+    console.log(b);
+}
+
+
+let num1 = 3;
+let num2 = -7;
+let num3 = 2;
+
+let product = num1 * num2 * num3;
+
+if (product < 0) {
+    alert("The sign is -");
+} else if (product > 0) {
+    alert("The sign is +");
+} else {
+    alert("The product is 0");
+}
+
+
+
+let x = 0;
+let y = -1;
+let z = 4;
+
+if (x >= y && x >= z) {
+    if (y >= z) {
+        alert(x + ", " + y + ", " + z);
+    } else {
+        alert(x + ", " + z + ", " + y);
+    }
+} else if (y >= x && y >= z) {
+    if (x >= z) {
+        alert(y + ", " + x + ", " + z);
+    } else {
+        alert(y + ", " + z + ", " + x);
+    }
+} else {
+    if (x >= y) {
+        alert(z + ", " + x + ", " + y);
+    } else {
+        alert(z + ", " + y + ", " + x);
+    }
+}
+
+
+for (let i = 0; i <= 15; i++) {
+    if (i % 2 === 0) {
+        console.log(i + " is even");
+    } else {
+        console.log(i + " is odd");
+    }
+}
+
+
+
+function lazyAdder(a) {
+    return function(b) {
+        return a + b;
+    };
+}
+
+
+function once(fn) {
+    let hasRun = false;
+    let result;
+    
+    return function(...args) {
+        if (hasRun === false) {
+            hasRun = true;
+            result = fn(...args);
+        }
+        return result;
+    };
+}
+
+function createCounter(start) {
+    let count = start;
+    
+    return {
+        increment: function() {
+            count++;
+        },
+        decrement: function() {
+            count--;
+        },
+        getCount: function() {
+            return count;
+        }
+    };
+}
+
+
+function isArmstrong(n) {
+    let numDigits = 0;
+    let temp1 = n;
+    
+    while (temp1 > 0) {
+        numDigits++;
+        temp1 = Math.floor(temp1 / 10);
+    }
+    
+    let sum = 0;
+    let temp2 = n;
+    
+    while (temp2 > 0) {
+        let lastDigit = temp2 % 10;
+        sum += lastDigit ** numDigits;
+        temp2 = Math.floor(temp2 / 10);
+    }
+    
+    if (sum === n) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+function isPalindrome(n) {
+    let original = n;
+    let reversed = 0;
+    let temp = n;
+    
+    while (temp > 0) {
+        let lastDigit = temp % 10;
+        reversed = (reversed * 10) + lastDigit;
+        temp = Math.floor(temp / 10);
+    }
+    
+    if (original === reversed) {
+        return true;
+    } else {
+        return false;
+    }
+}
